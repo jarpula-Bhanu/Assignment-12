@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment 12} 
+\author{Jarpula Bhanu Prasad - AI21BTECH11015}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Papoulis chap 10 Exercise 10.1}
+TABLE OF CONTENTS
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Problem}
+Q)Find the first-order characteristics function 
+\begin{itemize}
+    \item a) of a Poission process and 
+    \item b) of a Wiener process
+\end{itemize}
+\end{frame}
+
+\section{Solution}
+\begin{frame}{Solution}
+   a)If $\tilde{x}(t)$ is a Poisson process , then for a fixed t , $\tilde{x}$(t) is a Poission random varaible with parameters $\lambda$t.  Hence from \\ 
+   If $\textbf{x}$ is Poission distributed with parameter $\lambda$,
+   \begin{align}
+       P\{\textbf{x}=n\} = e^{-\lambda} \frac{\lambda^n}{n!} \hspace{5mm} n=0,1,2,3,.... \\
+       Then \varGamma(z) = e^{-\lambda} \Sigma^{\infty}_{n=0} \lambda^n \frac{z^n}{n!} = e^{\lambda(z-1)}
+   \end{align}
+   Its chatracteristic function equals to 
+   \begin{align}
+       e^{\lambda t(e^{jw-1})}
+   \end{align}
+\end{frame}
+
+\begin{frame}
+   b) If $\tilde{x}(t)$ is a Wiener process then f(x,t) is N(0,$\sqrt{\alpha t}$),Hence \\
+   The chatacteristic function of an N($\eta$,$\sigma$) random varaible x equals to
+    \begin{align}
+        \Phi(\omega) = exp\{j\eta \omega - \frac{1}{2} \sigma^2 \omega^2\}
+    \end{align}
+    its first order characteristics function is 
+    \begin{align}
+        e^{\frac{-\alpha t \omega^2}{2}}
+    \end{align}
+
+\end{frame}
+
+% % Blocks frame
+\section{Codes}
+\begin{frame}{CODES}
+
+ \begin{block}{Beamer}
+         Download Beamer code from - \href{https://github.com/jarpula-Bhanu/Assignment-12/blob/main/Assignment_12.tex}{Beamer}
+    \end{block}
+\end{frame} 
+
+\end{document}
